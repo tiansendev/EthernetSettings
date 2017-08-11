@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MaterialEdittext">
+        <item name="met_baseColor">@color/colorPrimary</item>
+        <item name="met_iconPadding">0dp</item>
+        <item name="met_floatingLabel">normal</item>
+        <item name="met_textColor">#999</item>
+    </style>
+
+</resources>
