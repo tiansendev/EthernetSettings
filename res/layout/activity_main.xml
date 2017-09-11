@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/normal_padding"
+        android:text="@string/config"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_big"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/connect_type" />
+
+        <RadioGroup
+            android:id="@+id/rg_connect_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_static_ip"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/static_ip" />
+
+            <Space
+                android:layout_width="@dimen/space"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/rb_dhcp"
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dhcp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView 
+            android:layout_width="@dimen/tv_normal_size"
+            android:layout_height="wrap_content"
+            android:text="@string/ip"
+            />
+        <EditText
+            android:id="@+id/et_ip"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/ip"
+            android:lines="1" />
+
+        <Space
+            android:layout_width="@dimen/space"
+            android:layout_height="wrap_content" />
+
+        <TextView 
+            android:layout_width="@dimen/tv_normal_size"
+            android:layout_height="wrap_content"
+            android:text="@string/prefix_describe"
+            />
+        <EditText
+            android:id="@+id/et_prefix_length"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/network_prefix"
+            android:lines="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView 
+            android:layout_width="@dimen/tv_normal_size"
+            android:layout_height="wrap_content"
+            android:text="@string/dns1_describe"
+            />
+        <EditText
+            android:id="@+id/et_dns1"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/dns1"
+            android:lines="1" />
+
+        <Space
+            android:layout_width="@dimen/space"
+            android:layout_height="wrap_content" />
+
+        <TextView 
+            android:layout_width="@dimen/tv_normal_size"
+            android:layout_height="wrap_content"
+            android:text="@string/dns2_describe"
+            />
+        <EditText
+            android:id="@+id/et_dns2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/dns2"
+            android:lines="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+           <TextView 
+            android:layout_width="@dimen/tv_normal_size"
+            android:layout_height="wrap_content"
+            android:text="@string/gateway_describe"
+            />
+        <EditText
+            android:id="@+id/et_gateway"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/gateway"
+            android:lines="1" />
+
+        <Space
+            android:layout_width="@dimen/space"
+            android:layout_height="wrap_content" />
+        
+        <Space 
+            android:layout_width="@dimen/tv_normal_size"
+            android:layout_height="wrap_content"
+            />
+
+        <Space
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/normal_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:layout_margin="@dimen/space"
+            android:background="@drawable/btn_bg"
+            android:text="@string/ok"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>
